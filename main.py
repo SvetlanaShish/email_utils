@@ -6,8 +6,8 @@ from sys import argv
 
 html = Template(Path('index.html').read_text())
 email = EmailMessage()
-email['from'] = 'Svetlana'
-email['to'] = 'shishmareva.2013@mail.ru'
+email['from'] = input('Enter your name')
+email['to'] = input('Enter destination email')
 email['subject'] = 'You won 1,000,000 dollars!'
 
 email.set_content(html.substitute({'name': 'TinTin'}), 'html')
